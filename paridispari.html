@@ -1,78 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title></title>
+  <meta charset="utf-8">
+  <title></title>
 </head>
 <body>
 
-	<script type="text/javascript">
-	    i = 0;
-	    c = 20;
+    <script type="text/javascript">
 
-	    var numero = prompt("Scrivi un numero");
-	    cond=true;
+      var num = prompt("inserisci un numero");
+      var cond = true;
 
-	    while(cond){
-		    if(!isNaN(numero)){
-		    	 if(numero % 2 == 0) {
-			    	alert("il tuo numero è pari");
-			    	var risposta = prompt("Vuoi continuare? Si o No?");
-			    	var risposta = risposta.toUpperCase();
-			    	if (risposta == "SI" || risposta =="certo" || risposta =="CERTO" || risposta =="Certo") {
-			    		var numero = prompt("Scrivi un numero");
-			    	}
-			    	else{
-			    		cond=false;
-			    	};
-			    }
-			    else{
-			    	alert("il tuo numero è dispari");
-			    	var risposta = prompt("Vuoi continuare? Si o No?");
-			    	var risposta = risposta.toUpperCase();
-			    	if (risposta == "SI" || risposta =="certo" || risposta =="CERTO" || risposta =="Certo") {
-			    		var numero = prompt("Scrivi un numero");
-			    	}
-			    	else{
-			    		cond=false;
-			    	};
-			    }
-		    }
-		    else{
-		    	alert("Non hai scritto un numero");
-		    	var numero = prompt("Scrivi un numero");
-		    }	
-	    }
-	    
-	   
-
-		while(false){
-			console.log("ciao")
-		}
-
-		while(i<=4){
-			i++;
-			console.log(i);
-		}
-
-		for(a = 1; a <= 5; a++){
-			console.log(a);
-		}
-
-		for(b = 0; b <= c; b++){
-			if(b % 2 == 0){
-				if(b!=4){
-					console.log("numero pari: "+b);
-				}
-			}
-			else if(b==13||b==17){
-				console.log(b+" è un numero speciale")
-			}
-			else{
-				console.log("numero dispari: "+b);
-			}
-		}
-	</script>
+      while(cond){
+        if(!isNaN(num)){
+          if(num % 2 == 0) {
+            alert(num + " è pari");
+            var ris = confirm("Vuoi continuare?");
+            if (ris == true) {
+              var num = prompt("inserisci un numero");
+            }
+            else{
+              cond=false;
+            };
+          }
+          else {
+            alert(num + " é dispari");
+            var ris = confirm("Vuoi continuare?");
+            if (ris == true) {
+              var num = prompt("inserisci un numero");
+            }
+            else{
+              cond=false;
+            };
+          }
+        }
+        else{
+          alert("il numero inserito non è corretto");
+          var num = prompt("inserisci un numero");
+        }
+      }
+    
+    </script>
 
 </body>
 </html>
