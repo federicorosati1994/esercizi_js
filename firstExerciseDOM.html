@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1 id="title">My First Page</h1>
+<p id="paragraph" class="red"></p>
+<img>
+
+<script type="text/javascript">
+	document.getElementById("paragraph").innerHTML = "Hello World!";
+	document.getElementById("title").innerHTML = document.getElementById("paragraph").innerHTML;
+	document.getElementsByClassName("red")[0].innerHTML = "Ciaoneee";
+	document.getElementsByClassName("red")[0].style.color= "red";
+	document.getElementsByTagName("img")[0].setAttribute('src', 'http://ungiornalistanellarete.tgcom24.it/files/2015/08/keep-calm-and-ciaone-257x300.png');
+	document.getElementsByTagName("title")[0].innerHTML = document.getElementsByClassName("red")[0].innerHTML
+	document.getElementsByTagName("img")[0].style.display= "none";
+</script>
+
+</body>
+</html>

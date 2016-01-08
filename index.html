@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var students = ["Material", "Letette", "Scimmiasaki", "Decidalei"]; //insert name
+
+	while(students.length!=0){
+		var coppia = [];
+		
+		var indexStudent = Math.floor(Math.random()*(students.length-1));
+		//console.log(indexStudent);
+		//console.log(students[indexStudent])
+		coppia.push(students[indexStudent]);
+		students.splice(indexStudent, 1);
+
+		
+		var indexStudent2 = Math.floor(Math.random()*(students.length-1));
+		//console.log(indexStudent2);
+		coppia.push(students[indexStudent2]);
+		//console.log(students[indexStudent2])
+		students.splice(indexStudent2,1);
+		//var firstCouple = [students[indexStudent],students[indexStudent2]];
+		alert(coppia);
+		//console.log(students);
+	}
+
+</script>
+</body>
+</html>
